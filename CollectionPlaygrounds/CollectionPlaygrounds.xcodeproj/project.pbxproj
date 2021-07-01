@@ -78,6 +78,7 @@
 		D056E532268A274E00539CCE /* BowWorkaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowWorkaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056E533268A274F00539CCE /* CollectionPlaygrounds copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CollectionPlaygrounds copy2-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/CollectionPlaygrounds copy2-Info.plist"; sourceTree = "<absolute>"; };
 		D056E544268A27FD00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D057A29A268D514400E2E8EF /* FP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FP.playground; path = "../../../Library/Autosave Information/FP.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D0EABDE7267F342D008CEC61 /* BasicMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EABDEA267F342D008CEC61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 		D0EABDDE267F342D008CEC61 = {
 			isa = PBXGroup;
 			children = (
+				D057A29A268D514400E2E8EF /* FP.playground */,
 				D0EABDE9267F342D008CEC61 /* CollectionPlaygrounds */,
 				D0EABE00267F3430008CEC61 /* CollectionPlaygroundsTests */,
 				D0EABE0B267F3430008CEC61 /* CollectionPlaygroundsUITests */,
@@ -539,6 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CollectionPlaygrounds copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,6 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CollectionPlaygrounds copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
