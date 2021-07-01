@@ -40,7 +40,7 @@ struct LocationManager {
             observer.onNext(CLLocation(latitude: 40.416691, longitude: -3.703264))
             observer.onCompleted()
             return Disposables.create()
-    }
+        }
     }()
 }
 
@@ -65,7 +65,7 @@ extension CLLocation {
 let env = Enviroment()
 
 class ViewController: UIViewController, MKMapViewDelegate {
-
+    
     private let disposeBag = DisposeBag()
     
     private lazy var mapView: MKMapView = {
@@ -198,64 +198,62 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         
         let (
-        stationNameLabelText,
+            stationNameLabelText,
             stationDistanceLabelText,
-                dockCountLabelText,
-                    mapViewCenteredLocation,
-                        lastUpdatedLabelText
-                            ) = talkDockViewModel(
-                                reloadButtonTapped: refreshButton
-                                    .rx
-                                    .controlEvent(.touchUpInside)
-                                    .asObservable(),
-                                viewDidLoad: .just(())
+            dockCountLabelText,
+            mapViewCenteredLocation,
+            lastUpdatedLabelText
+        ) = talkDockViewModel(
+            reloadButtonTapped: refreshButton
+                .rx
+                .controlEvent(.touchUpInside)
+                .asObservable(),
+            viewDidLoad: .just(())
         )
         
         stationNameLabelText
             .bind(to: titleLabel.rx.text)
             .disposed(by: disposeBag)
-
+        
         stationDistanceLabelText
             .bind(to: subtitleLabel.rx.text)
             .disposed(by: disposeBag)
-
+        
         dockCountLabelText
             .bind(to: dockCountLabel.rx.text)
             .disposed(by: disposeBag)
-
+        
         mapViewCenteredLocation
             .bind { [weak self] location in
                 self?.mapView.setCenter(location?.coordinate ?? CLLocation.plazaMayor.coordinate, animated: true)
             }
             .disposed(by: disposeBag)
-
+        
         lastUpdatedLabelText
             .bind(to: updatedLabel.rx.text)
             .disposed(by: disposeBag)
     }
     
-
-
+    
+    
 }
 
 
 func talkDockViewModel(
     reloadButtonTapped: Observable<Void>,
     viewDidLoad: Observable<Void>
-    ) -> (
+) -> (
     stationNameLabelText: Observable<String?>,
     stationDistanceLabelText: Observable<String>,
     dockCountLabelText: Observable<String?>,
     mapViewCenteredLocation: Observable<CLLocation?>,
     lastUpdatedLabelText: Observable<String>
-    ) {
+) {
     let fetchData = Observable.merge(
-                viewDidLoad,
-                reloadButtonTapped
-            )
-    reloadButtonTapped.subscribe { _ in
-        print("tap")
-    }
+        viewDidLoad,
+        reloadButtonTapped
+    )
+
     let currentLocation = fetchData
         .flatMapLatest { env.locationManager.location }
     
@@ -273,9 +271,9 @@ func talkDockViewModel(
     
     let stationDistanceLabelText = closestStation
         .withLatestFrom(currentLocation) { station,
-            location in
+                                           location in
             "\(Int(station?.location.distance(from: location) ?? 0))m away"
-            }
+        }
         .startWith("??")
     
     let dockCountLabelText = closestStation
@@ -299,5 +297,3 @@ func talkDockViewModel(
         lastUpdatedLabelText: lastUpdatedLabelText
     )
 }
-
-

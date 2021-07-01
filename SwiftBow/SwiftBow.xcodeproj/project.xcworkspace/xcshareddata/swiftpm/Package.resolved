@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Bow",
+        "repositoryURL": "https://github.com/bow-swift/bow",
+        "state": {
+          "branch": null,
+          "revision": "17ff76f1e0427a67e221c0a20b96324d256c340f",
+          "version": "0.8.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "254617dd7fae0c45319ba5fbea435bf4d0e15b5d",
+          "version": "5.1.2"
+        }
+      },
+      {
+        "package": "SwiftCheck",
+        "repositoryURL": "https://github.com/bow-swift/SwiftCheck.git",
+        "state": {
+          "branch": null,
+          "revision": "748359f9a95edf94d0c4664102f104f56b1ff1fb",
+          "version": "0.12.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
