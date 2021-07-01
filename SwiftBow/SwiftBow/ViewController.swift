@@ -10,7 +10,7 @@ import Bow
 import BowEffects
 
 class ViewController: UIViewController {
-
+    let request: IO<Error, (response: URLResponse, data: Data)> = URLSession.shared.dataTaskIO(with: URL(string: "https://bow-swift.io")!)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,6 +25,9 @@ class ViewController: UIViewController {
                                   api: TestAPI())
         cacheUser(by: "12345").provide(testEnv)
         
+        let stringIO: IO<Error, String> =
+            request.map { result in result.data }
+            .map { data in String(data: data, encoding: .utf8) ?? "" }^
     }
     
     func greet(name: String) {
@@ -63,7 +66,8 @@ class ViewController: UIViewController {
     
     func cacheUser(by id: String) -> EnvIO<Environment, Error, ()> {
         return EnvIO { environment in
-            environment.api.getUser(by: id)
+            environment.api
+                .getUser(by: id)
                 .flatMap { user in environment.database.save(user: user) }
         }
     }
