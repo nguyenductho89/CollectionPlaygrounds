@@ -25,8 +25,7 @@ class ViewController: UIViewController {
                                   api: TestAPI())
         cacheUser(by: "12345").provide(testEnv)
         
-        let stringIO: IO<Error, String> =
-            request.map { result in result.data }
+        let stringIO: IO<Error, String> = request.map { result in result.data }
             .map { data in String(data: data, encoding: .utf8) ?? "" }^
     }
     
