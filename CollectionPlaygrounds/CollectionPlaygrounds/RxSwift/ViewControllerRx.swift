@@ -63,22 +63,33 @@ class ViewController: UIViewController {
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
         disposeKeyboardHeight = self.rx.keyboardHeight
+            .flatMap({ height -> Observable<KeyboardStatus> in
+                let status: KeyboardStatus = height > 0 ? .show(withHeight: height) : .hide
+                return Observable.just(status)
+            })
+            .debug("thond keybo", trimOutput: true)
             .withUnretained(self)
             .subscribe(onNext: { (owner, keyboardHeight) in
-                guard keyboardHeight > 0 else {
-                    owner.scrollView.contentInset = .zero
-                    owner.scrollView.setContentOffset(owner.offset, animated: true)
-                    owner.isShown = false
-                    return
+                switch keyboardHeight {
+                    case .show(let height):
+                        owner.offset = owner.scrollView.contentOffset
+                        owner.scrollView.contentInset = UIEdgeInsets(top: 0,
+                                                                     left: 0,
+                                                                     bottom: height - owner.view.safeAreaInsets.bottom,
+                                                                     right: 0)
+                        let textfield = self.view.findTextfield().first(where: {$0.isEditing})
+                        let frame = (UIView.superViewOfType(UIView.self, ofView: textfield!) as! UIView).convert(textfield!.superview!.frame, to: owner.scrollView)
+                        owner.scrollView.scrollRectToVisible(frame, animated: false)
+                    case .hide:
+                        owner.scrollView.contentInset = .zero
+                        owner.scrollView.setContentOffset(owner.offset, animated: true)
                 }
-                guard !owner.isShown else {return}
-                owner.isShown = true
-                owner.offset = owner.scrollView.contentOffset
-                owner.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight - owner.view.safeAreaInsets.bottom, right: 0)
-                let textfield = self.view.findTextfield().first(where: {$0.isEditing})
-                let frame = (UIView.superViewOfType(UIView.self, ofView: textfield!) as! UIView).convert(textfield!.superview!.frame, to: owner.scrollView)
-                owner.scrollView.scrollRectToVisible(frame, animated: false)
             })
+    }
+    
+    enum KeyboardStatus {
+        case show(withHeight: CGFloat)
+        case hide
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -88,7 +99,6 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     var offset: CGPoint = .zero
-    var isShown = false
 }
 
 class CustomScrollView: UIScrollView {
