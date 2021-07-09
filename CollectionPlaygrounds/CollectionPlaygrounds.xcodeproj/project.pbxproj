@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0160F442697ED6500FC8F88 /* Materalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0160F432697ED6500FC8F88 /* Materalize.swift */; };
 		D056E4DA268A0F2A00539CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D056E4DB268A0F2A00539CCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
 		D056E4DD268A0F2A00539CCE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D056E4D1268A0F2A00539CCE /* RxRelay */; };
@@ -60,7 +61,6 @@
 		D0EABE49267F38CB008CEC61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE48267F38CB008CEC61 /* SnapKit */; };
 		D0FADDC32696D4BF00ABA40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEE267F342D008CEC61 /* ViewController.swift */; };
 		D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FADDCA2696DA8300ABA40B /* Extensions.swift */; };
-		D0FADDD32696DAFA00ABA40B /* ViewControllerRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0160F432697ED6500FC8F88 /* Materalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materalize.swift; sourceTree = "<group>"; };
 		D056E4EA268A0F2A00539CCE /* MonadNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonadNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056E4EF268A0F2A00539CCE /* CollectionPlaygrounds copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CollectionPlaygrounds copy-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/CollectionPlaygrounds copy-Info.plist"; sourceTree = "<absolute>"; };
 		D056E4FE268A103E00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 				D0CC72F6268EC62000762804 /* ViewController.swift */,
 				D0FADDCA2696DA8300ABA40B /* Extensions.swift */,
 				D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */,
+				D0160F432697ED6500FC8F88 /* Materalize.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -579,8 +581,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0FADDD32696DAFA00ABA40B /* ViewControllerRx.swift in Sources */,
 				D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */,
+				D0160F442697ED6500FC8F88 /* Materalize.swift in Sources */,
 				D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */,
 				D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */,
 			);
