@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0160F442697ED6500FC8F88 /* Materalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0160F432697ED6500FC8F88 /* Materalize.swift */; };
 		D056E4DA268A0F2A00539CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D056E4DB268A0F2A00539CCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
 		D056E4DD268A0F2A00539CCE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D056E4D1268A0F2A00539CCE /* RxRelay */; };
@@ -35,6 +34,8 @@
 		D056E52D268A274E00539CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EABDF3267F342F008CEC61 /* Assets.xcassets */; };
 		D056E52E268A274E00539CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EABDF0267F342D008CEC61 /* Main.storyboard */; };
 		D056E545268A27FD00539CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056E544268A27FD00539CCE /* ViewController.swift */; };
+		D0988BEF26982560004A6F7F /* CombiningObservablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */; };
+		D0988C1826982BD5004A6F7F /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = D0988C1726982BD5004A6F7F /* Charts */; };
 		D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
 		D0CC7341268EC65000762804 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D0CC7335268EC65000762804 /* RxRelay */; };
@@ -80,6 +81,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D0988C0B26982AC1004A6F7F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D0160F432697ED6500FC8F88 /* Materalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materalize.swift; sourceTree = "<group>"; };
 		D056E4EA268A0F2A00539CCE /* MonadNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonadNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,13 +106,7 @@
 		D056E533268A274F00539CCE /* CollectionPlaygrounds copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CollectionPlaygrounds copy2-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/CollectionPlaygrounds copy2-Info.plist"; sourceTree = "<absolute>"; };
 		D056E544268A27FD00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D057A29A268D514400E2E8EF /* FP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FP.playground; path = "../../../Library/Autosave Information/FP.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D0CC72DE268EC5F800762804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0CC72E0268EC5F800762804 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0CC72E2268EC5F800762804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D0CC72E5268EC5F800762804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0CC72E7268EC5FA00762804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D0CC72EA268EC5FA00762804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D0CC72EC268EC5FA00762804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiningObservablesVC.swift; sourceTree = "<group>"; };
 		D0CC72F6268EC62000762804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0CC731F268EC64700762804 /* RxSwiftTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxSwiftTest copy-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/RxSwiftTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		D0CC734E268EC65000762804 /* RxSwiftWorkaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftWorkaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +162,7 @@
 			files = (
 				D0CC7341268EC65000762804 /* RxRelay in Frameworks */,
 				D0CC7342268EC65000762804 /* Overture in Frameworks */,
+				D0988C1826982BD5004A6F7F /* Charts in Frameworks */,
 				D0CC7343268EC65000762804 /* SnapKit in Frameworks */,
 				D0CC7344268EC65000762804 /* RxCocoa in Frameworks */,
 				D0CC7345268EC65000762804 /* RxSwift in Frameworks */,
@@ -225,22 +234,9 @@
 				D0FADDCA2696DA8300ABA40B /* Extensions.swift */,
 				D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */,
 				D0160F432697ED6500FC8F88 /* Materalize.swift */,
+				D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */,
 			);
 			path = RxSwift;
-			sourceTree = "<group>";
-		};
-		D0CC72DD268EC5F800762804 /* RxSwiftTest */ = {
-			isa = PBXGroup;
-			children = (
-				D0CC72DE268EC5F800762804 /* AppDelegate.swift */,
-				D0CC72E0268EC5F800762804 /* SceneDelegate.swift */,
-				D0CC72E2268EC5F800762804 /* ViewController.swift */,
-				D0CC72E4268EC5F800762804 /* Main.storyboard */,
-				D0CC72E7268EC5FA00762804 /* Assets.xcassets */,
-				D0CC72E9268EC5FA00762804 /* LaunchScreen.storyboard */,
-				D0CC72EC268EC5FA00762804 /* Info.plist */,
-			);
-			path = RxSwiftTest;
 			sourceTree = "<group>";
 		};
 		D0EABDDE267F342D008CEC61 = {
@@ -250,7 +246,6 @@
 				D0EABDE9267F342D008CEC61 /* CollectionPlaygrounds */,
 				D0EABE00267F3430008CEC61 /* CollectionPlaygroundsTests */,
 				D0EABE0B267F3430008CEC61 /* CollectionPlaygroundsUITests */,
-				D0CC72DD268EC5F800762804 /* RxSwiftTest */,
 				D0EABDE8267F342D008CEC61 /* Products */,
 				D056E4EF268A0F2A00539CCE /* CollectionPlaygrounds copy-Info.plist */,
 				D056E533268A274F00539CCE /* CollectionPlaygrounds copy2-Info.plist */,
@@ -367,6 +362,7 @@
 				D0CC733C268EC65000762804 /* Sources */,
 				D0CC7340268EC65000762804 /* Frameworks */,
 				D0CC7347268EC65000762804 /* Resources */,
+				D0988C0B26982AC1004A6F7F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,6 +376,7 @@
 				D0CC7337268EC65000762804 /* RxBlocking */,
 				D0CC7338268EC65000762804 /* Overture */,
 				D0CC733A268EC65000762804 /* SnapKit */,
+				D0988C1726982BD5004A6F7F /* Charts */,
 			);
 			productName = CollectionPlaygrounds;
 			productReference = D0CC734E268EC65000762804 /* RxSwiftWorkaround.app */;
@@ -481,6 +478,7 @@
 				D0EABE33267F36E0008CEC61 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D0EABE41267F3899008CEC61 /* XCRemoteSwiftPackageReference "swift-overture" */,
 				D0EABE47267F38CB008CEC61 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D0988C1626982BD5004A6F7F /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = D0EABDE8267F342D008CEC61 /* Products */;
 			projectDirPath = "";
@@ -582,9 +580,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */,
-				D0160F442697ED6500FC8F88 /* Materalize.swift in Sources */,
 				D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */,
 				D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */,
+				D0988BEF26982560004A6F7F /* CombiningObservablesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,22 +628,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D0CC72E4268EC5F800762804 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0CC72E5268EC5F800762804 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D0CC72E9268EC5FA00762804 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0CC72EA268EC5FA00762804 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		D0EABDF0267F342D008CEC61 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1130,6 +1112,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		D0988C1626982BD5004A6F7F /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 		D0CC7334268EC65000762804 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1240,6 +1230,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D056E51F268A274E00539CCE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		D0988C1726982BD5004A6F7F /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0988C1626982BD5004A6F7F /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 		D0CC7333268EC65000762804 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
