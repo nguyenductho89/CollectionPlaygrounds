@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         v.legend.form = .square
         v.xAxis.axisMinimum = 0.0
         v.dragEnabled = true
+        v.scaleXEnabled = true
         return v
     }()
     lazy var chartView2: LineChartView = {
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
         v.legend.form = .square
         v.xAxis.axisMinimum = 0.0
         v.dragEnabled = true
+        v.scaleXEnabled = true
         return v
     }()
     
