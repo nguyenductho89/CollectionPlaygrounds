@@ -36,6 +36,7 @@
 		D056E545268A27FD00539CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056E544268A27FD00539CCE /* ViewController.swift */; };
 		D0988BEF26982560004A6F7F /* CombiningObservablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */; };
 		D0988C1826982BD5004A6F7F /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = D0988C1726982BD5004A6F7F /* Charts */; };
+		D0C7F934269CEEDA00F7B256 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C7F933269CEEDA00F7B256 /* State.swift */; };
 		D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
 		D0CC7341268EC65000762804 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D0CC7335268EC65000762804 /* RxRelay */; };
@@ -107,6 +108,7 @@
 		D056E544268A27FD00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D057A29A268D514400E2E8EF /* FP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FP.playground; path = "../../../Library/Autosave Information/FP.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiningObservablesVC.swift; sourceTree = "<group>"; };
+		D0C7F933269CEEDA00F7B256 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D0CC72F6268EC62000762804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0CC731F268EC64700762804 /* RxSwiftTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxSwiftTest copy-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/RxSwiftTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		D0CC734E268EC65000762804 /* RxSwiftWorkaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftWorkaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 				D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */,
 				D0160F432697ED6500FC8F88 /* Materalize.swift */,
 				D0988BEE26982560004A6F7F /* CombiningObservablesVC.swift */,
+				D0C7F933269CEEDA00F7B256 /* State.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */,
 				D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */,
 				D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */,
+				D0C7F934269CEEDA00F7B256 /* State.swift in Sources */,
 				D0988BEF26982560004A6F7F /* CombiningObservablesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

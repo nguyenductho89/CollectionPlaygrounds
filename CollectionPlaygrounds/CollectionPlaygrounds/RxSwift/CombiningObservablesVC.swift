@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import Charts
 import SnapKit
+import RxCocoa
 
 class ViewController: UIViewController {
     enum Lines: Int {
@@ -39,8 +40,7 @@ class ViewController: UIViewController {
         }
     }
     var disposeBAg = DisposeBag.init()
-    let currentTime = PublishSubject<Void>.init()
-    var numberCount = 0
+    let currentTime: BehaviorRelay<Int> = BehaviorRelay(value : 0)
     lazy var chartView1: LineChartView = {
         let v = LineChartView(frame: .zero)
         v.data = LineChartData()
@@ -155,20 +155,28 @@ class ViewController: UIViewController {
         source2
             .subscribe(on: MainScheduler.instance)
             .do(onNext: { _ in
-                self.currentTime.onNext(())
+                let previous = self.currentTime.value
+                self.currentTime.accept(previous+1)
             })
             .debug("@@@@@@@ source2", trimOutput: true)
-            .do(onNext: { _ in
-                self.chartView1.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source1.defaultY,icon: UIColor.systemRed.image(.init(width: 1, height: 1))),
+            .withLatestFrom(currentTime)
+            .do(onNext: { currentTimeValue in
+                let newEntry = ChartDataEntry(x: Double(currentTimeValue),
+                                              y: Lines.source1.defaultY,
+                                              icon: UIColor.systemRed.image(.init(width: 1, height: 1)))
+                self.chartView1.data?.appendEntry(newEntry,
                                                  toDataSet: Lines.source1.dataSetIndex)
-                self.chartView1.moveViewToX(Double(self.numberCount + 10))
+                self.chartView1.moveViewToX(Double(currentTimeValue + 10))
                 self.chartView1.notifyDataSetChanged()
             })
-            .do(onNext: { _ in
-                self.chartView2.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source2.defaultY,icon: UIColor.systemRed.image(.init(width: 20, height: 20))),
+            .do(onNext: { currentTimeValue in
+                let newEntry = ChartDataEntry(x: Double(currentTimeValue),
+                                              y: Lines.source2.defaultY,
+                                              icon: UIColor.systemRed.image(.init(width: 20, height: 20)))
+                self.chartView2.data?.appendEntry(newEntry,
                                                  toDataSet: Lines.source2.dataSetIndex)
-                
-                self.chartView2.moveViewToX(Double(self.numberCount + 10))
+
+                self.chartView2.moveViewToX(Double(currentTimeValue + 10))
                 self.chartView2.notifyDataSetChanged()
             })
             .subscribe { _ in }
@@ -176,28 +184,38 @@ class ViewController: UIViewController {
         
         source1
             .do(onNext: { _ in
-                self.currentTime.onNext(())
+                let previous = self.currentTime.value
+                self.currentTime.accept(previous+1)
             })
             .debug("!!!!!!!! source1", trimOutput: true)
             .subscribe(on: MainScheduler.instance)
-            .subscribe { s in
-                self.chartView1.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source1.defaultY,icon: UIColor.systemBlue.image(.init(width: 20, height: 20))),
+            .withLatestFrom(currentTime)
+            .do(onNext: { currentTimeValue in
+                let newEntry = ChartDataEntry(x: Double(currentTimeValue),
+                                              y: Lines.source1.defaultY,
+                                              icon: UIColor.systemBlue.image(.init(width: 20, height: 20)))
+                self.chartView1.data?.appendEntry(newEntry,
                                                  toDataSet: Lines.source1.dataSetIndex)
-                self.chartView2.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source2.defaultY, icon: UIColor.systemBlue.image(.init(width: 1, height: 1))),
-                                                 toDataSet: Lines.source2.dataSetIndex)
-                self.chartView1.moveViewToX(Double(self.numberCount + 10))
-                self.chartView2.moveViewToX(Double(self.numberCount + 10))
+                self.chartView1.moveViewToX(Double(currentTimeValue + 10))
                 self.chartView1.notifyDataSetChanged()
+            })
+            .do(onNext: { currentTimeValue in
+                let newEntry = ChartDataEntry(x: Double(currentTimeValue),
+                                              y: Lines.source2.defaultY,
+                                              icon: UIColor.systemBlue.image(.init(width: 1, height: 1)))
+                self.chartView2.data?.appendEntry(newEntry,
+                                                 toDataSet: Lines.source2.dataSetIndex)
+                self.chartView2.moveViewToX(Double(currentTimeValue + 10))
                 self.chartView2.notifyDataSetChanged()
-            }
+            })
+            .subscribe { _ in }
             .disposed(by: disposeBAg)
         
         currentTime
             .subscribe { (_) in
-            self.numberCount += 1
-                self.chartView1.xAxis.axisMinimum = Double(self.numberCount - 10)
-                self.chartView2.xAxis.axisMinimum = Double(self.numberCount - 10)
-        }
+                self.chartView1.xAxis.axisMinimum = Double(self.currentTime.value - 10)
+                self.chartView2.xAxis.axisMinimum = Double(self.currentTime.value - 10)
+            }
         .disposed(by: disposeBAg)
         
     }
