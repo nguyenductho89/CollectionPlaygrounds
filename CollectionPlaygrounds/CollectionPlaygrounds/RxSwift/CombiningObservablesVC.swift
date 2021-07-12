@@ -158,16 +158,20 @@ class ViewController: UIViewController {
                 self.currentTime.onNext(())
             })
             .debug("@@@@@@@ source2", trimOutput: true)
-            .subscribe { s in
-                self.chartView2.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source2.defaultY,icon: UIColor.systemRed.image(.init(width: 20, height: 20))),
-                                                 toDataSet: Lines.source2.dataSetIndex)
+            .do(onNext: { _ in
                 self.chartView1.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source1.defaultY,icon: UIColor.systemRed.image(.init(width: 1, height: 1))),
                                                  toDataSet: Lines.source1.dataSetIndex)
                 self.chartView1.moveViewToX(Double(self.numberCount + 10))
+                self.chartView1.notifyDataSetChanged()
+            })
+            .do(onNext: { _ in
+                self.chartView2.data?.appendEntry(ChartDataEntry(x: Double(self.numberCount), y: Lines.source2.defaultY,icon: UIColor.systemRed.image(.init(width: 20, height: 20))),
+                                                 toDataSet: Lines.source2.dataSetIndex)
+                
                 self.chartView2.moveViewToX(Double(self.numberCount + 10))
                 self.chartView2.notifyDataSetChanged()
-                self.chartView1.notifyDataSetChanged()
-            }
+            })
+            .subscribe { _ in }
             .disposed(by: disposeBAg)
         
         source1
