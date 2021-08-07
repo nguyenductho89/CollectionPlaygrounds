@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04B05B426BE98DC00B5CF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B05B326BE98DC00B5CF04 /* AppDelegate.swift */; };
+		D04B05B626BE98DC00B5CF04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B05B526BE98DC00B5CF04 /* SceneDelegate.swift */; };
+		D04B05B826BE98DC00B5CF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B05B726BE98DC00B5CF04 /* ViewController.swift */; };
+		D04B05BB26BE98DC00B5CF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04B05B926BE98DC00B5CF04 /* Main.storyboard */; };
+		D04B05BE26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D04B05BC26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld */; };
+		D04B05C026BE98E100B5CF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04B05BF26BE98E100B5CF04 /* Assets.xcassets */; };
+		D04B05C326BE98E100B5CF04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04B05C126BE98E100B5CF04 /* LaunchScreen.storyboard */; };
+		D04B05CE26BE98E200B5CF04 /* CosmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B05CD26BE98E200B5CF04 /* CosmeticTests.swift */; };
+		D04B05D926BE98E200B5CF04 /* CosmeticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B05D826BE98E200B5CF04 /* CosmeticUITests.swift */; };
+		D04B060426BE99ED00B5CF04 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B060326BE99ED00B5CF04 /* Products.json */; };
+		D04B060526BE99ED00B5CF04 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B060326BE99ED00B5CF04 /* Products.json */; };
+		D04B062226BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */; };
+		D04B062326BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */; };
 		D056E4DA268A0F2A00539CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D056E4DB268A0F2A00539CCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
 		D056E4DD268A0F2A00539CCE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D056E4D1268A0F2A00539CCE /* RxRelay */; };
@@ -73,6 +86,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D04B05CA26BE98E200B5CF04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EABDDF267F342D008CEC61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D04B05B026BE98DC00B5CF04;
+			remoteInfo = Cosmetic;
+		};
+		D04B05D526BE98E200B5CF04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EABDDF267F342D008CEC61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D04B05B026BE98DC00B5CF04;
+			remoteInfo = Cosmetic;
+		};
 		D0EABDFE267F3430008CEC61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0EABDDF267F342D008CEC61 /* Project object */;
@@ -104,6 +131,23 @@
 
 /* Begin PBXFileReference section */
 		D0160F432697ED6500FC8F88 /* Materalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materalize.swift; sourceTree = "<group>"; };
+		D04B05B126BE98DC00B5CF04 /* Cosmetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04B05B326BE98DC00B5CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D04B05B526BE98DC00B5CF04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D04B05B726BE98DC00B5CF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D04B05BA26BE98DC00B5CF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D04B05BD26BE98DC00B5CF04 /* Cosmetic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cosmetic.xcdatamodel; sourceTree = "<group>"; };
+		D04B05BF26BE98E100B5CF04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D04B05C226BE98E100B5CF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D04B05C426BE98E100B5CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04B05C926BE98E200B5CF04 /* CosmeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04B05CD26BE98E200B5CF04 /* CosmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticTests.swift; sourceTree = "<group>"; };
+		D04B05CF26BE98E200B5CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04B05D426BE98E200B5CF04 /* CosmeticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmeticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04B05D826BE98E200B5CF04 /* CosmeticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticUITests.swift; sourceTree = "<group>"; };
+		D04B05DA26BE98E200B5CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04B060326BE99ED00B5CF04 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ProductTagger.mlkitmodel; sourceTree = "<group>"; };
 		D056E4EA268A0F2A00539CCE /* MonadNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonadNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056E4EF268A0F2A00539CCE /* CollectionPlaygrounds copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CollectionPlaygrounds copy-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/CollectionPlaygrounds copy-Info.plist"; sourceTree = "<absolute>"; };
 		D056E4FE268A103E00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +193,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D04B05AE26BE98DC00B5CF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05C626BE98E200B5CF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05D126BE98E200B5CF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D056E4DC268A0F2A00539CCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +291,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D04B05B226BE98DC00B5CF04 /* Cosmetic */ = {
+			isa = PBXGroup;
+			children = (
+				D04B05ED26BE998B00B5CF04 /* Resources */,
+				D04B05B326BE98DC00B5CF04 /* AppDelegate.swift */,
+				D04B05B526BE98DC00B5CF04 /* SceneDelegate.swift */,
+				D04B05B726BE98DC00B5CF04 /* ViewController.swift */,
+				D04B05B926BE98DC00B5CF04 /* Main.storyboard */,
+				D04B05BF26BE98E100B5CF04 /* Assets.xcassets */,
+				D04B05C126BE98E100B5CF04 /* LaunchScreen.storyboard */,
+				D04B05C426BE98E100B5CF04 /* Info.plist */,
+				D04B05BC26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld */,
+			);
+			path = Cosmetic;
+			sourceTree = "<group>";
+		};
+		D04B05CC26BE98E200B5CF04 /* CosmeticTests */ = {
+			isa = PBXGroup;
+			children = (
+				D04B05CD26BE98E200B5CF04 /* CosmeticTests.swift */,
+				D04B05CF26BE98E200B5CF04 /* Info.plist */,
+			);
+			path = CosmeticTests;
+			sourceTree = "<group>";
+		};
+		D04B05D726BE98E200B5CF04 /* CosmeticUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D04B05D826BE98E200B5CF04 /* CosmeticUITests.swift */,
+				D04B05DA26BE98E200B5CF04 /* Info.plist */,
+			);
+			path = CosmeticUITests;
+			sourceTree = "<group>";
+		};
+		D04B05ED26BE998B00B5CF04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */,
+				D04B060326BE99ED00B5CF04 /* Products.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D056E4FC268A101800539CCE /* BasicMVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +397,9 @@
 				D0EABE00267F3430008CEC61 /* CollectionPlaygroundsTests */,
 				D0EABE0B267F3430008CEC61 /* CollectionPlaygroundsUITests */,
 				D0AAD6D426B1A1F800523AF4 /* FP */,
+				D04B05B226BE98DC00B5CF04 /* Cosmetic */,
+				D04B05CC26BE98E200B5CF04 /* CosmeticTests */,
+				D04B05D726BE98E200B5CF04 /* CosmeticUITests */,
 				D0EABDE8267F342D008CEC61 /* Products */,
 				D056E4EF268A0F2A00539CCE /* CollectionPlaygrounds copy-Info.plist */,
 				D0D6147C269853220002BDF2 /* CollectionPlaygrounds copy-Info copy.plist */,
@@ -308,6 +419,9 @@
 				D056E532268A274E00539CCE /* BowWorkaround.app */,
 				D0CC734E268EC65000762804 /* RxSwiftWorkaround.app */,
 				D0AAD6D326B1A1F800523AF4 /* FP.app */,
+				D04B05B126BE98DC00B5CF04 /* Cosmetic.app */,
+				D04B05C926BE98E200B5CF04 /* CosmeticTests.xctest */,
+				D04B05D426BE98E200B5CF04 /* CosmeticUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +464,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D04B05B026BE98DC00B5CF04 /* Cosmetic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D04B05E126BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "Cosmetic" */;
+			buildPhases = (
+				D04B05AD26BE98DC00B5CF04 /* Sources */,
+				D04B05AE26BE98DC00B5CF04 /* Frameworks */,
+				D04B05AF26BE98DC00B5CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cosmetic;
+			productName = Cosmetic;
+			productReference = D04B05B126BE98DC00B5CF04 /* Cosmetic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D04B05C826BE98E200B5CF04 /* CosmeticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D04B05E226BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "CosmeticTests" */;
+			buildPhases = (
+				D04B05C526BE98E200B5CF04 /* Sources */,
+				D04B05C626BE98E200B5CF04 /* Frameworks */,
+				D04B05C726BE98E200B5CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D04B05CB26BE98E200B5CF04 /* PBXTargetDependency */,
+			);
+			name = CosmeticTests;
+			productName = CosmeticTests;
+			productReference = D04B05C926BE98E200B5CF04 /* CosmeticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D04B05D326BE98E200B5CF04 /* CosmeticUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D04B05E326BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "CosmeticUITests" */;
+			buildPhases = (
+				D04B05D026BE98E200B5CF04 /* Sources */,
+				D04B05D126BE98E200B5CF04 /* Frameworks */,
+				D04B05D226BE98E200B5CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D04B05D626BE98E200B5CF04 /* PBXTargetDependency */,
+			);
+			name = CosmeticUITests;
+			productName = CosmeticUITests;
+			productReference = D04B05D426BE98E200B5CF04 /* CosmeticUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D056E4CE268A0F2A00539CCE /* MonadNetworking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D056E4E7268A0F2A00539CCE /* Build configuration list for PBXNativeTarget "MonadNetworking" */;
@@ -514,6 +681,17 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					D04B05B026BE98DC00B5CF04 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					D04B05C826BE98E200B5CF04 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = D04B05B026BE98DC00B5CF04;
+					};
+					D04B05D326BE98E200B5CF04 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = D04B05B026BE98DC00B5CF04;
+					};
 					D0AAD6D226B1A1F800523AF4 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -556,11 +734,40 @@
 				D056E516268A274E00539CCE /* BowWorkaround */,
 				D0CC7332268EC65000762804 /* RxSwiftWorkaround */,
 				D0AAD6D226B1A1F800523AF4 /* FP */,
+				D04B05B026BE98DC00B5CF04 /* Cosmetic */,
+				D04B05C826BE98E200B5CF04 /* CosmeticTests */,
+				D04B05D326BE98E200B5CF04 /* CosmeticUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D04B05AF26BE98DC00B5CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04B05C326BE98E100B5CF04 /* LaunchScreen.storyboard in Resources */,
+				D04B05C026BE98E100B5CF04 /* Assets.xcassets in Resources */,
+				D04B05BB26BE98DC00B5CF04 /* Main.storyboard in Resources */,
+				D04B060426BE99ED00B5CF04 /* Products.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05C726BE98E200B5CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04B060526BE99ED00B5CF04 /* Products.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05D226BE98E200B5CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D056E4E3268A0F2A00539CCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +835,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D04B05AD26BE98DC00B5CF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04B05BE26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld in Sources */,
+				D04B062226BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */,
+				D04B05B826BE98DC00B5CF04 /* ViewController.swift in Sources */,
+				D04B05B426BE98DC00B5CF04 /* AppDelegate.swift in Sources */,
+				D04B05B626BE98DC00B5CF04 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05C526BE98E200B5CF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04B05CE26BE98E200B5CF04 /* CosmeticTests.swift in Sources */,
+				D04B062326BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D04B05D026BE98E200B5CF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04B05D926BE98E200B5CF04 /* CosmeticUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D056E4D8268A0F2A00539CCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,6 +939,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D04B05CB26BE98E200B5CF04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D04B05B026BE98DC00B5CF04 /* Cosmetic */;
+			targetProxy = D04B05CA26BE98E200B5CF04 /* PBXContainerItemProxy */;
+		};
+		D04B05D626BE98E200B5CF04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D04B05B026BE98DC00B5CF04 /* Cosmetic */;
+			targetProxy = D04B05D526BE98E200B5CF04 /* PBXContainerItemProxy */;
+		};
 		D0EABDFF267F3430008CEC61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0EABDE6267F342D008CEC61 /* BasicMVVM */;
@@ -716,6 +962,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D04B05B926BE98DC00B5CF04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D04B05BA26BE98DC00B5CF04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D04B05C126BE98E100B5CF04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D04B05C226BE98E100B5CF04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		D0AAD6DB26B1A1F800523AF4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -751,6 +1013,122 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D04B05DB26BE98E200B5CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Cosmetic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.Cosmetic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D04B05DC26BE98E200B5CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Cosmetic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.Cosmetic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D04B05DD26BE98E200B5CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CosmeticTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.CosmeticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cosmetic.app/Cosmetic";
+			};
+			name = Debug;
+		};
+		D04B05DE26BE98E200B5CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CosmeticTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.CosmeticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cosmetic.app/Cosmetic";
+			};
+			name = Release;
+		};
+		D04B05DF26BE98E200B5CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CosmeticUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.CosmeticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cosmetic;
+			};
+			name = Debug;
+		};
+		D04B05E026BE98E200B5CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CosmeticUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thond.CosmeticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cosmetic;
+			};
+			name = Release;
+		};
 		D056E4E8268A0F2A00539CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1138,6 +1516,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D04B05E126BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "Cosmetic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D04B05DB26BE98E200B5CF04 /* Debug */,
+				D04B05DC26BE98E200B5CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D04B05E226BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "CosmeticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D04B05DD26BE98E200B5CF04 /* Debug */,
+				D04B05DE26BE98E200B5CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D04B05E326BE98E200B5CF04 /* Build configuration list for PBXNativeTarget "CosmeticUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D04B05DF26BE98E200B5CF04 /* Debug */,
+				D04B05E026BE98E200B5CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D056E4E7268A0F2A00539CCE /* Build configuration list for PBXNativeTarget "MonadNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1446,6 +1851,19 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D04B05BC26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D04B05BD26BE98DC00B5CF04 /* Cosmetic.xcdatamodel */,
+			);
+			currentVersion = D04B05BD26BE98DC00B5CF04 /* Cosmetic.xcdatamodel */;
+			path = Cosmetic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0EABDDF267F342D008CEC61 /* Project object */;
 }
