@@ -1,0 +1,83 @@
+@startuml
+
+class CoreDataStack
+class NSEntityDescription
+class NSFetchRequest
+class NSManagedObject
+class NSManagedObjectContext
+class NSManagedObjectContext
+class NSManagedObjectModel
+class NSPersistentStore
+class NSPersistentStoreCoordinator
+class NSPredicate
+class Person
+
+class CoreDataStack {
+    modelName: String
+    -init(modelName: String)
+    storeContainer: NSPersistentContainer
+    managedContext: NSManagedObjectContext
+}
+CoreDataStack::storeContainer --> NSPersistentContainer
+CoreDataStack::managedContext --> NSManagedObjectContext
+
+
+NSManagedObject <|-- Person
+
+class NSPredicate
+
+class NSManagedObjectContext {
+    +fetch(request: NSFetchRequest)
+    +save()
+}
+NSManagedObjectContext::fetch ..->NSFetchRequest
+
+class NSManagedObject {
+    +init(entity: NSEntityDescription, 
+          insertInto context: NSManagedObjectContext?)
+    +class entity(): NSEntityDescription
+    +setValue(_ value: Any?, forKeyPath keyPath: String)
+}
+NSManagedObject::entity ..> NSEntityDescription
+
+class NSFetchRequest {
+    predicate: NSPredicate
+}
+NSFetchRequest::predicate ---> NSPredicate
+
+class NSEntityDescription {
+    .. init ..
+    + {classifier} entity(forEntityName entityName: String, in context: NSManagedObjectContext): NSEntityDescription
+    .. create NSManagedObjectContext ..
+    + {classifier} insertNewObject(forEntityName entityName: String, into context: NSManagedObjectContext): NSManagedObject
+}
+
+class Person {
+    +fetchRequest(): NSFetchRequest<Person>
+}
+Person::fetchRequest ..> NSFetchRequest
+
+class NSPersistentContainer {
+    viewContext: NSManagedObjectContext
+    managedObjectModel: NSManagedObjectModel 
+    persistentStoreCoordinator: NSPersistentStoreCoordinator
+    persistentStoreDescriptions:[NSPersistentStoreDescription]
+}
+NSPersistentContainer::viewContext --> NSManagedObjectContext
+NSPersistentContainer::managedObjectModel --> NSManagedObjectModel 
+NSPersistentContainer::persistentStoreCoordinator --> NSPersistentStoreCoordinator
+
+
+class NSManagedObjectModel {
+    entities: [NSEntityDescription]
+}
+NSManagedObjectModel::entities *-- NSEntityDescription : many >
+
+class NSPersistentStoreCoordinator {
+    managedObjectModel: NSManagedObjectModel
+    persistentStores: [NSPersistentStore]
+}
+NSPersistentStoreCoordinator::managedObjectModel --> NSManagedObjectModel
+NSPersistentStoreCoordinator::persistentStores *-- NSPersistentStore : many >
+
+@enduml

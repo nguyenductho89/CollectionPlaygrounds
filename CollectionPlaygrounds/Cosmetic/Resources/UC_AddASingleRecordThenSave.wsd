@@ -1,0 +1,3 @@
+@startuml
+NSManagedObjectContext -> Bob: Authentication Request
+@enduml
