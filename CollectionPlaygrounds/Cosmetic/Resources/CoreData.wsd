@@ -11,6 +11,9 @@ class NSPersistentStore
 class NSPersistentStoreCoordinator
 class NSPredicate
 class Person
+interface NSFetchRequestResult
+
+note "Debug: \nEdit Scheme \n-> Run \n-> Argument passed on launch \n-com.apple.CoreData.SQLDebug 1 \n-com.apple.CoreData.Logging.stderr 1" as N1
 
 class CoreDataStack {
     modelName: String
@@ -25,25 +28,76 @@ CoreDataStack::managedContext --> NSManagedObjectContext
 NSManagedObject <|-- Person
 
 class NSPredicate
+class NSCompoundPredicate
+
+NSPredicate <|-- NSCompoundPredicate 
 
 class NSManagedObjectContext {
-    +fetch(request: NSFetchRequest)
+    +fetch<T:NSFetchRequestResult>(request: NSFetchRequest<T>): [T]
     +save()
+    persistentStoreCoordinator: NSPersistentStoreCoordinator 
 }
 NSManagedObjectContext::fetch ..->NSFetchRequest
+note right of NSManagedObjectContext::fetch
+Fetch | Save data: 
+    Person, User, News...
+end note
+NSManagedObjectContext::persistentStoreCoordinator ..-> NSPersistentStoreCoordinator
+
+class NSPersistentStore {
+    weak persistentStoreCoordinator: NSPersistentStoreCoordinator
+}
+NSPersistentStore::persistentStoreCoordinator ..> NSPersistentStoreCoordinator: weak
+
+class NSBatchUpdateRequest {
+    init(entityName: String)
+    init(entity: NSEntityDescription)
+    predicate: NSPredicate?
+}
+NSBatchUpdateRequest --> NSEntityDescription
+NSBatchUpdateRequest::predicate --> NSPredicate
+NSPersistentStoreRequest <|-- NSBatchUpdateRequest
+
+class NSBatchDeleteRequest
+NSPersistentStoreRequest <|-- NSBatchDeleteRequest
+
+class NSPersistentStoreRequest {
+    affectedStores: [NSPersistentStore]?
+}
+NSPersistentStoreRequest::affectedStores *-- NSPersistentStore : many >
+
 
 class NSManagedObject {
+     managedObjectContext: NSManagedObjectContext?
     +init(entity: NSEntityDescription, 
           insertInto context: NSManagedObjectContext?)
     +class entity(): NSEntityDescription
     +setValue(_ value: Any?, forKeyPath keyPath: String)
 }
 NSManagedObject::entity ..> NSEntityDescription
+NSManagedObjectContext <.. NSManagedObject::managedObjectContext: unowned
 
-class NSFetchRequest {
+class NSFetchRequest<extends NSFetchRequestResult> {
     predicate: NSPredicate
+    sortDescriptors: [NSSortDescriptor]?
+    entity: NSEntityDescription
+    propertiesToFetch: [Any]
 }
-NSFetchRequest::predicate ---> NSPredicate
+NSFetchRequest::predicate --> NSPredicate
+NSFetchRequest::sortDescriptors *-- NSSortDescriptor : many >
+NSFetchRequest::entity --> NSEntityDescription
+NSFetchRequest::propertiesToFetch ..> NSExpressionDescription
+note right of NSFetchRequest::propertiesToFetch
+    Any: 
+   NSPropertyDescriptions or NSString
+end note
+
+class NSAsynchronousFetchRequest<extends NSFetchRequestResult> {
+    fetchRequest: NSFetchRequest<NSFetchRequestResult>
+}
+NSAsynchronousFetchRequest::fetchRequest --> NSFetchRequest
+
+
 
 class NSEntityDescription {
     .. init ..
@@ -70,9 +124,11 @@ NSPersistentContainer::persistentStoreCoordinator --> NSPersistentStoreCoordinat
 
 class NSManagedObjectModel {
     entities: [NSEntityDescription]
+    .. get a <b><color:royalBlue>IMMUTABLE</color> fetch request ..
+    -fetchRequestTemplateForName(name: String): NSFetchRequest 
 }
 NSManagedObjectModel::entities *-- NSEntityDescription : many >
-
+NSManagedObjectModel::fetchRequestTemplateForName ..> NSFetchRequest
 class NSPersistentStoreCoordinator {
     managedObjectModel: NSManagedObjectModel
     persistentStores: [NSPersistentStore]
@@ -80,4 +136,33 @@ class NSPersistentStoreCoordinator {
 NSPersistentStoreCoordinator::managedObjectModel --> NSManagedObjectModel
 NSPersistentStoreCoordinator::persistentStores *-- NSPersistentStore : many >
 
+NSFetchRequestResult <|.. NSNumber
+NSFetchRequestResult <|.. NSDictionary
+NSFetchRequestResult <|.. NSManagedObject
+NSFetchRequestResult <|.. NSManagedObjectID
+
+class NSExpressionDescription {
+    expression: NSExpression
+}
+NSExpressionDescription::expression --> NSExpression
+
+class NSExpression
+
+class NSAsynchronousFetchResult<extends NSFetchRequestResult> {
+    finalResult: [NSFetchRequestResult]
+}
+NSAsynchronousFetchRequest ..> NSAsynchronousFetchResult
+
+class NSFetchedResultsController<extends NSFetchRequestResult> {
+    fetchRequest: NSFetchRequest
+    managedObjectContext: NSManagedObjectContext
+    -- <b><color:royalBlue>SECTIONS</color> --
+    sectionNameKeyPath: String
+    --  <b><color:royalBlue>CACHING</color>  --
+    cacheName: String
+    --  <b><color:royalBlue>NOTIFY CHANGES</color>  --
+    delegate: NSFetchedResultsControllerDelegate
+}
+NSFetchedResultsController::fetchRequest --> NSFetchRequest
+NSFetchedResultsController::managedObjectContext --> NSManagedObjectContext
 @enduml
