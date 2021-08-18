@@ -11,19 +11,16 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    lazy var coreDataStack = CoreDataStack(modelName: "Cosmetic")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // 1
-        let managedContext = self.persistentContainer.viewContext
-        // 2
-        let entity = NSEntityDescription.entity(forEntityName: "Person",
-                                                in: managedContext)!
-        let person = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        // 3
-        person.setValue("", forKeyPath: "name")
+        do {
+            try coreDataStack.importJSONSeedData()
+        } catch {
+            print("er")
+        }
         return true
     }
 
@@ -70,4 +67,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 }
+
 

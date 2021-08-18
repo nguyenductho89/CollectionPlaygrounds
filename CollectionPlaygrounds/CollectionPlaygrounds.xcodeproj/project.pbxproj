@@ -62,6 +62,10 @@
 		D0AAD6DF26B1A1F900523AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AAD6DE26B1A1F900523AF4 /* Assets.xcassets */; };
 		D0AAD6E226B1A1F900523AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AAD6E026B1A1F900523AF4 /* LaunchScreen.storyboard */; };
 		D0AAD6EE26B1A26100523AF4 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AAD6ED26B1A26100523AF4 /* UIImageExtension.swift */; };
+		D0C6993626CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd in Resources */ = {isa = PBXBuildFile; fileRef = D0C6993426CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd */; };
+		D0C6994A26CD4AEF00D5D03B /* ingredientsCosmetic.json in Resources */ = {isa = PBXBuildFile; fileRef = D0C6994926CD4AEF00D5D03B /* ingredientsCosmetic.json */; };
+		D0C6998026CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6997E26CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift */; };
+		D0C6998126CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6997F26CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift */; };
 		D0C7F934269CEEDA00F7B256 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C7F933269CEEDA00F7B256 /* State.swift */; };
 		D0CC733D268EC65000762804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEA267F342D008CEC61 /* AppDelegate.swift */; };
 		D0CC733F268EC65000762804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEC267F342D008CEC61 /* SceneDelegate.swift */; };
@@ -181,6 +185,10 @@
 		D0AAD6E126B1A1F900523AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0AAD6E326B1A1F900523AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0AAD6ED26B1A26100523AF4 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D0C6993426CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UC_AddASingleRecordThenSave.wsd; sourceTree = "<group>"; };
+		D0C6994926CD4AEF00D5D03B /* ingredientsCosmetic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ingredientsCosmetic.json; sourceTree = "<group>"; };
+		D0C6997E26CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CosmeticIngredients+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0C6997F26CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CosmeticIngredients+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D0C7F933269CEEDA00F7B256 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D0CC72F6268EC62000762804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0CC731F268EC64700762804 /* RxSwiftTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxSwiftTest copy-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/RxSwiftTest copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -307,6 +315,7 @@
 		D04B05B226BE98DC00B5CF04 /* Cosmetic */ = {
 			isa = PBXGroup;
 			children = (
+				D0C6997C26CD4E7200D5D03B /* Model */,
 				D06FF36926C030930003E76C /* Walk+CoreDataClass.swift */,
 				D06FF36A26C030930003E76C /* Walk+CoreDataProperties.swift */,
 				D06FF36B26C030930003E76C /* Person+CoreDataClass.swift */,
@@ -347,6 +356,8 @@
 		D04B05ED26BE998B00B5CF04 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0C6994926CD4AEF00D5D03B /* ingredientsCosmetic.json */,
+				D0C6993426CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd */,
 				D04F3E2126BF869F006CC6EA /* CoreData.wsd */,
 				D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */,
 				D04B060326BE99ED00B5CF04 /* Products.json */,
@@ -394,6 +405,23 @@
 				D0AAD6ED26B1A26100523AF4 /* UIImageExtension.swift */,
 			);
 			path = FP;
+			sourceTree = "<group>";
+		};
+		D0C6997C26CD4E7200D5D03B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6997D26CD4E7200D5D03B /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0C6997D26CD4E7200D5D03B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6997E26CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift */,
+				D0C6997F26CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D0CC72D7268EC5D800762804 /* RxSwift */ = {
@@ -768,8 +796,10 @@
 			files = (
 				D04B05C326BE98E100B5CF04 /* LaunchScreen.storyboard in Resources */,
 				D04B05C026BE98E100B5CF04 /* Assets.xcassets in Resources */,
+				D0C6993626CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd in Resources */,
 				D04B05BB26BE98DC00B5CF04 /* Main.storyboard in Resources */,
 				D04B060426BE99ED00B5CF04 /* Products.json in Resources */,
+				D0C6994A26CD4AEF00D5D03B /* ingredientsCosmetic.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,8 +892,10 @@
 				D04B05BE26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld in Sources */,
 				D06FF36E26C030930003E76C /* Walk+CoreDataProperties.swift in Sources */,
 				D06FF36F26C030930003E76C /* Person+CoreDataClass.swift in Sources */,
+				D0C6998126CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift in Sources */,
 				D04B062226BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */,
 				D06FF30826C00BC30003E76C /* CoreDataStack.swift in Sources */,
+				D0C6998026CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift in Sources */,
 				D04B05B826BE98DC00B5CF04 /* ViewController.swift in Sources */,
 				D04B05B426BE98DC00B5CF04 /* AppDelegate.swift in Sources */,
 				D04B05B626BE98DC00B5CF04 /* SceneDelegate.swift in Sources */,

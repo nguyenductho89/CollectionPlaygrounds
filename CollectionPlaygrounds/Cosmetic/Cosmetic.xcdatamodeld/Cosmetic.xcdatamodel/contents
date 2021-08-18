@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Person" representedClassName="Person" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="walks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Walk" inverseName="person" inverseEntity="Walk"/>
-    </entity>
-    <entity name="Walk" representedClassName="Walk" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="walks" inverseEntity="Person"/>
+    <entity name="CosmeticIngredients" representedClassName="CosmeticIngredients" syncable="YES">
+        <attribute name="categories1" optional="YES" attributeType="String"/>
+        <attribute name="categories2" optional="YES" attributeType="String"/>
+        <attribute name="categories3" optional="YES" attributeType="String"/>
+        <attribute name="descriptionen" optional="YES" attributeType="String"/>
+        <attribute name="descriptionvn" optional="YES" attributeType="String"/>
+        <attribute name="inci" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-25.15625" positionY="-185.375" width="128" height="73"/>
-        <element name="Walk" positionX="191.859375" positionY="-95.5234375" width="128" height="73"/>
+        <element name="CosmeticIngredients" positionX="81" positionY="-117" width="128" height="148"/>
     </elements>
 </model>

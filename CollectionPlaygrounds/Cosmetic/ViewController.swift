@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NLTagger.findProduct("iPad Pro, Apple Watch, iphone is a Apple Watch product, MacBook, ")
+        NLTagger.findProduct("Apple Pay Apple")
     }
 
 
