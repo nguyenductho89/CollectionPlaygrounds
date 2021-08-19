@@ -33,31 +33,56 @@ class CoreDataStack {
             print("Unresolved error \(error), \(error.userInfo)") }
     }
     
-    func importJSONSeedData() throws {
-        let jsonURL = Bundle.main.url(forResource: "ingredientsCosmetic", withExtension: "json")!
-        let jsonData = try Data(contentsOf: jsonURL)
-        guard let jsonArray = try JSONSerialization.jsonObject(with: jsonData, options: [.fragmentsAllowed]) as? [[String: Any]]
-        else {
-            return
+    func importJSONSeedData() -> Result<Void, Error> {
+        guard let jsonURL = Bundle.main.url(forResource: "ingredientsCosmetic", withExtension: "json") else {
+            return .failure(CoreDataImportJSONError.resourceNotFound)
         }
-        for jsonDictionary in jsonArray {
-            do {
-                let data = try JSONSerialization.data(withJSONObject: jsonDictionary, options: .prettyPrinted)
-                let decoder = JSONDecoder()
-                decoder.userInfo[CodingUserInfoKey.managedObjectContext] = self.managedContext
-                let ingreParsed = try decoder.decode(CosmeticIngredients.self, from: data)
-                let ingre = CosmeticIngredients(context: self.managedContext)
-                ingre.inci = ingreParsed.inci
-                ingre.descriptionvn = ingreParsed.descriptionvn
-                ingre.descriptionen = ingreParsed.descriptionen
-                ingre.categories1 = ingreParsed.categories1
-                ingre.categories2 = ingreParsed.categories2
-                ingre.categories3 = ingreParsed.categories3
-                ingre.rating = ingreParsed.rating
-            } catch {
-                print("Error parse \(error)")
+        let jsonData = Result {try Data(contentsOf: jsonURL)}
+            .flatMap { data in
+            Result {try JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed]) as? [[String: Any]]}
+        }
+        guard let jsonArray = try? jsonData.get()  else {
+            return .failure(CoreDataImportJSONError.fileDataInvalid)
+        }
+        jsonArray.compactMap {
+            guard let data = try? JSONSerialization.data(withJSONObject: $0, options: .prettyPrinted) else {
+                return
             }
+            let decoder = JSONDecoder()
+            decoder.userInfo[CodingUserInfoKey.managedObjectContext] = self.managedContext
+            let ingreParsed = try decoder.decode(CosmeticIngredients.self, from: data)
+            let ingre = CosmeticIngredients(context: self.managedContext)
+            ingre.inci = ingreParsed.inci
+            ingre.descriptionvn = ingreParsed.descriptionvn
+            ingre.descriptionen = ingreParsed.descriptionen
+            ingre.categories1 = ingreParsed.categories1
+            ingre.categories2 = ingreParsed.categories2
+            ingre.categories3 = ingreParsed.categories3
+            ingre.rating = ingreParsed.rating
         }
-        self.saveContext()
+//        for jsonDictionary in jsonArray {
+//            do {
+//                let data = try JSONSerialization.data(withJSONObject: jsonDictionary, options: .prettyPrinted)
+//                let decoder = JSONDecoder()
+//                decoder.userInfo[CodingUserInfoKey.managedObjectContext] = self.managedContext
+//                let ingreParsed = try decoder.decode(CosmeticIngredients.self, from: data)
+//                let ingre = CosmeticIngredients(context: self.managedContext)
+//                ingre.inci = ingreParsed.inci
+//                ingre.descriptionvn = ingreParsed.descriptionvn
+//                ingre.descriptionen = ingreParsed.descriptionen
+//                ingre.categories1 = ingreParsed.categories1
+//                ingre.categories2 = ingreParsed.categories2
+//                ingre.categories3 = ingreParsed.categories3
+//                ingre.rating = ingreParsed.rating
+//            } catch {
+//                print("Error parse \(error)")
+//            }
+//        }
+//        self.saveContext()
     }
+}
+
+enum CoreDataImportJSONError: Error {
+    case resourceNotFound
+    case fileDataInvalid
 }

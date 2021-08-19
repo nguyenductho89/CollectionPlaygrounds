@@ -13,8 +13,8 @@ import CoreData
 public class CosmeticIngredients: NSManagedObject, Decodable {
     enum CodingKeys: String, CodingKey {
         case inci
-        case descriptionvn = "description"
-        case descriptionen = "descriptionVn"
+        case descriptionvn = "descriptionVn"
+        case descriptionen = "description"
         case categories1
         case categories2
         case categories3
