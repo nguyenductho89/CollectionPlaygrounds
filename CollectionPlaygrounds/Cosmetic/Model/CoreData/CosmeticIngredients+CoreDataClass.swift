@@ -35,11 +35,3 @@ public class CosmeticIngredients: NSManagedObject, Decodable {
         self.rating = try container.decode(String.self, forKey: .rating)
     }
 }
-
-extension CodingUserInfoKey {
-    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")!
-}
-
-enum DecoderConfigurationError: Error {
-    case missingManagedObjectContext
-}

@@ -24,7 +24,7 @@ extension Array where Element == JSONObject {
         
     }
     func importToCoreData<T: DecoableNSManagedObject>(managedContext: NSManagedObjectContext, type: T.Type) -> Result<RecordImportedCount, Error> {
-        let errorIndexes = self.map {$0.importToCoreData(managedContext: managedContext, type: type)}
+        let errorIndexes = self.map {$0.convertToManagedObject(managedContext: managedContext, type: type)}
             .enumerated()
             .filter({
                 (try? $0.element.get()) == nil

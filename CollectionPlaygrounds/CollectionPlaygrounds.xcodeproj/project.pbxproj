@@ -99,6 +99,8 @@
 		D0F078AE26D17AFE00900177 /* JSONEncoder+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */; };
 		D0F078B926D17B2100900177 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078B826D17B2100900177 /* URL+Extension.swift */; };
 		D0F078C426D17B4500900177 /* JSONSerialization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */; };
+		D0F078CF26D17C2800900177 /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078CE26D17C2800900177 /* NSManagedObjectContext+Extension.swift */; };
+		D0F078DA26D17CBE00900177 /* Error+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078D926D17CBE00900177 /* Error+CoreData.swift */; };
 		D0FADDC32696D4BF00ABA40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEE267F342D008CEC61 /* ViewController.swift */; };
 		D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FADDCA2696DA8300ABA40B /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -225,6 +227,8 @@
 		D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+CoreData.swift"; sourceTree = "<group>"; };
 		D0F078B826D17B2100900177 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONSerialization+Extension.swift"; sourceTree = "<group>"; };
+		D0F078CE26D17C2800900177 /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
+		D0F078D926D17CBE00900177 /* Error+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+CoreData.swift"; sourceTree = "<group>"; };
 		D0FADDCA2696DA8300ABA40B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,7 +350,6 @@
 				D04B05C126BE98E100B5CF04 /* LaunchScreen.storyboard */,
 				D04B05C426BE98E100B5CF04 /* Info.plist */,
 				D04B05BC26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld */,
-				D06FF30726C00BC30003E76C /* CoreDataStack.swift */,
 			);
 			path = Cosmetic;
 			sourceTree = "<group>";
@@ -444,6 +447,9 @@
 				D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */,
 				D0F078B826D17B2100900177 /* URL+Extension.swift */,
 				D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */,
+				D06FF30726C00BC30003E76C /* CoreDataStack.swift */,
+				D0F078CE26D17C2800900177 /* NSManagedObjectContext+Extension.swift */,
+				D0F078D926D17CBE00900177 /* Error+CoreData.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -928,11 +934,13 @@
 				D0F078B926D17B2100900177 /* URL+Extension.swift in Sources */,
 				D0F078C426D17B4500900177 /* JSONSerialization+Extension.swift in Sources */,
 				D04B05B826BE98DC00B5CF04 /* ViewController.swift in Sources */,
+				D0F078DA26D17CBE00900177 /* Error+CoreData.swift in Sources */,
 				D04B05B426BE98DC00B5CF04 /* AppDelegate.swift in Sources */,
 				D0F078A326D17AD600900177 /* Bundle+CoreData.swift in Sources */,
 				D04B05B626BE98DC00B5CF04 /* SceneDelegate.swift in Sources */,
 				D06FF36D26C030930003E76C /* Walk+CoreDataClass.swift in Sources */,
 				D04F3E0E26BF7F76006CC6EA /* AppDelegate+CoreData.swift in Sources */,
+				D0F078CF26D17C2800900177 /* NSManagedObjectContext+Extension.swift in Sources */,
 				D06FF37026C030930003E76C /* Person+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

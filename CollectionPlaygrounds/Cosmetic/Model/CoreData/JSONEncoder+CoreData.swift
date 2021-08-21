@@ -8,6 +8,14 @@
 import Foundation
 import CoreData
 
+extension CodingUserInfoKey {
+    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")!
+}
+
+enum DecoderConfigurationError: Error {
+    case missingManagedObjectContext
+}
+
 extension JSONDecoder {
     func decodeDataToManagedObject<T: DecoableNSManagedObject>(data:Data,
                                                                managedContext: NSManagedObjectContext,
