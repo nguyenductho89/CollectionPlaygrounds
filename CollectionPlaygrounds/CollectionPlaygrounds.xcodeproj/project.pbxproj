@@ -92,6 +92,13 @@
 		D0EABE43267F3899008CEC61 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE42267F3899008CEC61 /* Overture */; };
 		D0EABE49267F38CB008CEC61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE48267F38CB008CEC61 /* SnapKit */; };
 		D0F0785226D08FEB00900177 /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F0785126D08FEB00900177 /* File.txt */; };
+		D0F0788226D17A2100900177 /* Array+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0788126D17A2100900177 /* Array+CoreData.swift */; };
+		D0F0788D26D17A6900900177 /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0788C26D17A6900900177 /* DomainModels.swift */; };
+		D0F0789826D17AA200900177 /* JSONObject+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0789726D17AA200900177 /* JSONObject+CoreData.swift */; };
+		D0F078A326D17AD600900177 /* Bundle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078A226D17AD600900177 /* Bundle+CoreData.swift */; };
+		D0F078AE26D17AFE00900177 /* JSONEncoder+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */; };
+		D0F078B926D17B2100900177 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078B826D17B2100900177 /* URL+Extension.swift */; };
+		D0F078C426D17B4500900177 /* JSONSerialization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */; };
 		D0FADDC32696D4BF00ABA40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEE267F342D008CEC61 /* ViewController.swift */; };
 		D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FADDCA2696DA8300ABA40B /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -211,6 +218,13 @@
 		D0EABE0C267F3430008CEC61 /* CollectionPlaygroundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPlaygroundsUITests.swift; sourceTree = "<group>"; };
 		D0EABE0E267F3430008CEC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F0785126D08FEB00900177 /* File.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
+		D0F0788126D17A2100900177 /* Array+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CoreData.swift"; sourceTree = "<group>"; };
+		D0F0788C26D17A6900900177 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModels.swift; sourceTree = "<group>"; };
+		D0F0789726D17AA200900177 /* JSONObject+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONObject+CoreData.swift"; sourceTree = "<group>"; };
+		D0F078A226D17AD600900177 /* Bundle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+CoreData.swift"; sourceTree = "<group>"; };
+		D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+CoreData.swift"; sourceTree = "<group>"; };
+		D0F078B826D17B2100900177 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONSerialization+Extension.swift"; sourceTree = "<group>"; };
 		D0FADDCA2696DA8300ABA40B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -423,6 +437,13 @@
 			children = (
 				D0C6997E26CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift */,
 				D0C6997F26CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift */,
+				D0F0788126D17A2100900177 /* Array+CoreData.swift */,
+				D0F0788C26D17A6900900177 /* DomainModels.swift */,
+				D0F0789726D17AA200900177 /* JSONObject+CoreData.swift */,
+				D0F078A226D17AD600900177 /* Bundle+CoreData.swift */,
+				D0F078AD26D17AFD00900177 /* JSONEncoder+CoreData.swift */,
+				D0F078B826D17B2100900177 /* URL+Extension.swift */,
+				D0F078C326D17B4500900177 /* JSONSerialization+Extension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -895,13 +916,20 @@
 			files = (
 				D04B05BE26BE98DC00B5CF04 /* Cosmetic.xcdatamodeld in Sources */,
 				D06FF36E26C030930003E76C /* Walk+CoreDataProperties.swift in Sources */,
+				D0F0788D26D17A6900900177 /* DomainModels.swift in Sources */,
+				D0F0789826D17AA200900177 /* JSONObject+CoreData.swift in Sources */,
 				D06FF36F26C030930003E76C /* Person+CoreDataClass.swift in Sources */,
 				D0C6998126CD4E7200D5D03B /* CosmeticIngredients+CoreDataProperties.swift in Sources */,
+				D0F0788226D17A2100900177 /* Array+CoreData.swift in Sources */,
 				D04B062226BE9C9500B5CF04 /* ProductTagger.mlkitmodel in Sources */,
 				D06FF30826C00BC30003E76C /* CoreDataStack.swift in Sources */,
+				D0F078AE26D17AFE00900177 /* JSONEncoder+CoreData.swift in Sources */,
 				D0C6998026CD4E7200D5D03B /* CosmeticIngredients+CoreDataClass.swift in Sources */,
+				D0F078B926D17B2100900177 /* URL+Extension.swift in Sources */,
+				D0F078C426D17B4500900177 /* JSONSerialization+Extension.swift in Sources */,
 				D04B05B826BE98DC00B5CF04 /* ViewController.swift in Sources */,
 				D04B05B426BE98DC00B5CF04 /* AppDelegate.swift in Sources */,
+				D0F078A326D17AD600900177 /* Bundle+CoreData.swift in Sources */,
 				D04B05B626BE98DC00B5CF04 /* SceneDelegate.swift in Sources */,
 				D06FF36D26C030930003E76C /* Walk+CoreDataClass.swift in Sources */,
 				D04F3E0E26BF7F76006CC6EA /* AppDelegate+CoreData.swift in Sources */,
