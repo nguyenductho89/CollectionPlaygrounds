@@ -16,7 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // 1
-        let a = coreDataStack.importJSONSeedData()
+        let a = coreDataStack.importJSONDictArray(type: CosmeticIngredients.self, forResource: "ingredientsCosmetic", witExtension: "json")
+        
+        switch a {
+        case .success(let num):
+            print("imported: \(num)")
+        case .failure(let error):
+            error.importJSONDictArrayError { e in
+                print(e)
+            } jsonSerialization: { e in
+                print(e)
+            } importError: { e in
+                print(e.localizedDebugString)
+            } systemError: { e in
+                print(e)
+            }
+
+
+        }
         return true
     }
 

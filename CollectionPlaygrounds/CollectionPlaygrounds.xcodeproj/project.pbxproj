@@ -91,6 +91,7 @@
 		D0EABE3D267F36E0008CEC61 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE3C267F36E0008CEC61 /* RxBlocking */; };
 		D0EABE43267F3899008CEC61 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE42267F3899008CEC61 /* Overture */; };
 		D0EABE49267F38CB008CEC61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0EABE48267F38CB008CEC61 /* SnapKit */; };
+		D0F0785226D08FEB00900177 /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F0785126D08FEB00900177 /* File.txt */; };
 		D0FADDC32696D4BF00ABA40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EABDEE267F342D008CEC61 /* ViewController.swift */; };
 		D0FADDCB2696DA8300ABA40B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FADDCA2696DA8300ABA40B /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -209,6 +210,7 @@
 		D0EABE08267F3430008CEC61 /* CollectionPlaygroundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionPlaygroundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EABE0C267F3430008CEC61 /* CollectionPlaygroundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPlaygroundsUITests.swift; sourceTree = "<group>"; };
 		D0EABE0E267F3430008CEC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F0785126D08FEB00900177 /* File.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		D0FADDCA2696DA8300ABA40B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0FADDD22696DAFA00ABA40B /* ViewControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,6 +363,7 @@
 				D04F3E2126BF869F006CC6EA /* CoreData.wsd */,
 				D04B062126BE9C9500B5CF04 /* ProductTagger.mlkitmodel */,
 				D04B060326BE99ED00B5CF04 /* Products.json */,
+				D0F0785126D08FEB00900177 /* File.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 			files = (
 				D04B05C326BE98E100B5CF04 /* LaunchScreen.storyboard in Resources */,
 				D04B05C026BE98E100B5CF04 /* Assets.xcassets in Resources */,
+				D0F0785226D08FEB00900177 /* File.txt in Resources */,
 				D0C6993626CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd in Resources */,
 				D04B05BB26BE98DC00B5CF04 /* Main.storyboard in Resources */,
 				D04B060426BE99ED00B5CF04 /* Products.json in Resources */,
