@@ -48,6 +48,8 @@
 		D056E52D268A274E00539CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EABDF3267F342F008CEC61 /* Assets.xcassets */; };
 		D056E52E268A274E00539CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EABDF0267F342D008CEC61 /* Main.storyboard */; };
 		D056E545268A27FD00539CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056E544268A27FD00539CCE /* ViewController.swift */; };
+		D065AC6726D204B500594BC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D065AC6926D204B500594BC2 /* Localizable.strings */; };
+		D065AC9D26D2081000594BC2 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = D065AC9C26D2081000594BC2 /* Rswift */; };
 		D06FF30826C00BC30003E76C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FF30726C00BC30003E76C /* CoreDataStack.swift */; };
 		D06FF36D26C030930003E76C /* Walk+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FF36926C030930003E76C /* Walk+CoreDataClass.swift */; };
 		D06FF36E26C030930003E76C /* Walk+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FF36A26C030930003E76C /* Walk+CoreDataProperties.swift */; };
@@ -180,6 +182,14 @@
 		D056E533268A274F00539CCE /* CollectionPlaygrounds copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CollectionPlaygrounds copy2-Info.plist"; path = "/Users/nguyenductho/Documents/CollectionPlaygrounds/CollectionPlaygrounds/CollectionPlaygrounds copy2-Info.plist"; sourceTree = "<absolute>"; };
 		D056E544268A27FD00539CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D057A29A268D514400E2E8EF /* FP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FP.playground; path = "../../../Library/Autosave Information/FP.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D065AC1C26D2023F00594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		D065AC2626D2024000594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D065AC2726D2024000594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		D065AC2826D2024100594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D065AC2926D2024100594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		D065AC2A26D2024100594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D065AC6826D204B500594BC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D065AC6A26D204B900594BC2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D06FF30726C00BC30003E76C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D06FF36926C030930003E76C /* Walk+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Walk+CoreDataClass.swift"; path = "../../Walk+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D06FF36A26C030930003E76C /* Walk+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Walk+CoreDataProperties.swift"; path = "../../Walk+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -238,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D065AC9D26D2081000594BC2 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +346,7 @@
 		D04B05B226BE98DC00B5CF04 /* Cosmetic */ = {
 			isa = PBXGroup;
 			children = (
+				D065AC0F26D201A600594BC2 /* UI */,
 				D0C6997C26CD4E7200D5D03B /* Model */,
 				D06FF36926C030930003E76C /* Walk+CoreDataClass.swift */,
 				D06FF36A26C030930003E76C /* Walk+CoreDataProperties.swift */,
@@ -410,6 +422,22 @@
 				D056E544268A27FD00539CCE /* ViewController.swift */,
 			);
 			path = BowWorkAround;
+			sourceTree = "<group>";
+		};
+		D065AC0F26D201A600594BC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D065AC1026D201AC00594BC2 /* Localized */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D065AC1026D201AC00594BC2 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				D065AC6926D204B500594BC2 /* Localizable.strings */,
+			);
+			path = Localized;
 			sourceTree = "<group>";
 		};
 		D0AAD6D426B1A1F800523AF4 /* FP */ = {
@@ -555,6 +583,9 @@
 			dependencies = (
 			);
 			name = Cosmetic;
+			packageProductDependencies = (
+				D065AC9C26D2081000594BC2 /* Rswift */,
+			);
 			productName = Cosmetic;
 			productReference = D04B05B126BE98DC00B5CF04 /* Cosmetic.app */;
 			productType = "com.apple.product-type.application";
@@ -793,6 +824,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = D0EABDDE267F342D008CEC61;
 			packageReferences = (
@@ -800,6 +832,7 @@
 				D0EABE41267F3899008CEC61 /* XCRemoteSwiftPackageReference "swift-overture" */,
 				D0EABE47267F38CB008CEC61 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D0988C1626982BD5004A6F7F /* XCRemoteSwiftPackageReference "Charts" */,
+				D065AC9B26D2081000594BC2 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = D0EABDE8267F342D008CEC61 /* Products */;
 			projectDirPath = "";
@@ -829,6 +862,7 @@
 				D0F0785226D08FEB00900177 /* File.txt in Resources */,
 				D0C6993626CD4ABA00D5D03B /* UC_AddASingleRecordThenSave.wsd in Resources */,
 				D04B05BB26BE98DC00B5CF04 /* Main.storyboard in Resources */,
+				D065AC6726D204B500594BC2 /* Localizable.strings in Resources */,
 				D04B060426BE99ED00B5CF04 /* Products.json in Resources */,
 				D0C6994A26CD4AEF00D5D03B /* ingredientsCosmetic.json in Resources */,
 			);
@@ -1064,6 +1098,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D04B05BA26BE98DC00B5CF04 /* Base */,
+				D065AC2926D2024100594BC2 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1072,14 +1107,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				D04B05C226BE98E100B5CF04 /* Base */,
+				D065AC2A26D2024100594BC2 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D065AC6926D204B500594BC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D065AC6826D204B500594BC2 /* en */,
+				D065AC6A26D204B900594BC2 /* vi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D0AAD6DB26B1A1F800523AF4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D0AAD6DC26B1A1F800523AF4 /* Base */,
+				D065AC2726D2024000594BC2 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1088,6 +1134,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D0AAD6E126B1A1F900523AF4 /* Base */,
+				D065AC2826D2024100594BC2 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1096,6 +1143,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D0EABDF1267F342D008CEC61 /* Base */,
+				D065AC1C26D2023F00594BC2 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1104,6 +1152,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D0EABDF6267F342F008CEC61 /* Base */,
+				D065AC2626D2024000594BC2 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1381,6 +1430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1442,6 +1492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1764,6 +1815,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		D065AC9B26D2081000594BC2 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		D0988C1626982BD5004A6F7F /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts";
@@ -1882,6 +1941,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D056E51F268A274E00539CCE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		D065AC9C26D2081000594BC2 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D065AC9B26D2081000594BC2 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
 		};
 		D0988C1726982BD5004A6F7F /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
