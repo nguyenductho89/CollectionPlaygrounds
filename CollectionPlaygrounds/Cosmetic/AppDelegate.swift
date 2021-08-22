@@ -21,18 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch a {
         case .success(let num):
             print("imported: \(num)")
-        case .failure(let error):
-            error.importJSONDictArrayError { e in
-                print(e)
-            } jsonSerialization: { e in
-                print(e)
-            } importError: { e in
-                print(e.localizedDebugString)
-            } systemError: { e in
-                print(e)
-            }
-
-
+        case .failure(let error ):
+            print(error.localizedDescription)
         }
         return true
     }

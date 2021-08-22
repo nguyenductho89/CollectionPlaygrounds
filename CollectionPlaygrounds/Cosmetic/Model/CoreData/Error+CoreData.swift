@@ -7,19 +7,23 @@
 
 import Foundation
 
+enum ImportJSONToCoreDataError: Error {
+    case bundeError(_ error: Bundle.BundleError)
+    case jsonSerialization(_ error: JSONSerialization.JSONSerializationError)
+    case importError(_ error: Array<JSONObject>.ArrayJSONObjectImportError)
+    case systemError(_ error: Error)
+}
+
 extension Error {
-    func importJSONDictArrayError(bundeError: ((Bundle.BundleError) -> Void)?,
-                                  jsonSerialization: ((JSONSerialization.JSONSerializationError) -> Void)?,
-                                  importError: ((Array<JSONObject>.ArrayJSONObjectImportError) -> Void)?,
-                                  systemError: ((Error) -> Void)?) {
+    func importJSONDictArrayError() -> ImportJSONToCoreDataError {
         if let be = self as? Bundle.BundleError {
-            bundeError?(be)
+            return .bundeError(be)
         } else if let je = self as? JSONSerialization.JSONSerializationError {
-            jsonSerialization?(je)
+            return .jsonSerialization(je)
         } else if let aje = self as? Array<JSONObject>.ArrayJSONObjectImportError {
-            importError?(aje)
+            return .importError(aje)
         } else {
-            systemError?(self)
+            return .systemError(self)
         }
     }
 }
