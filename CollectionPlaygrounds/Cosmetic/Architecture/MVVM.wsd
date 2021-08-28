@@ -1,0 +1,22 @@
+@startuml
+class UserViewController {
+    viewModel: UserViewModel
+}
+UserViewController::viewModel ---> UserViewModel
+class UserViewModel {
+    repository: UserRepository
+    
+}
+UserViewModel::repository --> UserRepository
+class UserRepository {
+    - webservice: Webservice
+    - userDao: UserDao
+}
+UserRepository::userDao --> UserDao
+interface UserDao {
+    save(user: User)
+    load(userId: String): Flow<User>
+}
+
+class User {}
+@enduml
